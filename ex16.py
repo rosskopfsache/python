@@ -22,7 +22,6 @@ def generatePassword(numbers=True, letters=True, special=True, length=16):
     if special is True:
         special = ['!', '#', '+', ',','.','$','&','(',')','?','*']
         raw = raw + special
-    #raw = numbers + letters + special
     random.shuffle(raw)
     pw = ''.join(str(i) for i in raw[:length])
     
